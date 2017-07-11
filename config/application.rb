@@ -12,6 +12,8 @@ Bundler.require(*Rails.groups)
 module Demo
   class Application < Rails::Application
     config.load_defaults 5.1
-    config.eager_load = false
+    config.cache_classes = true
+    config.eager_load = true
+    config.log_level = :debug
   end
 end
